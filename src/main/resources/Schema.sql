@@ -13,11 +13,11 @@ CREATE SCHEMA product_catalogue;
       product_type_name VARCHAR (50) NOT NULL
   );
 
-     CREATE TABLE product_catalogue.brand(
+  CREATE TABLE product_catalogue.brand(
       brand_id INT AUTO_INCREMENT PRIMARY key ,
       brand_name VARCHAR (50) NOT NULL
   );
-
+  /*
 CREATE TABLE product_catalogue.product(
       product_id INT AUTO_INCREMENT PRIMARY key ,
       sku VARCHAR(50) NOT NULL,
@@ -32,4 +32,4 @@ CREATE TABLE product_catalogue.product(
       FOREIGN KEY (supplier_value) REFERENCES product_catalogue.supplier(supplier_id),
       CONSTRAINT UC_product UNIQUE (sku)
   );
-
+*/

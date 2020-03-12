@@ -21,10 +21,18 @@ public class SearchController {
     public SearchService searchService;
 
 
+    /**Search products based on search criteria
+     *
+     * @param color
+     * @param size
+     * @param brand
+     * @param price
+     * @return
+     */
     @ApiOperation(value = " Search Products " , notes = " This API will get the product details based on the given search criteria ")
     @RequestMapping(value="/products",method = RequestMethod.GET)
     public ResponseEntity<Object> getProductList(@RequestParam(required=false) String color ,@RequestParam(required=false) String size,
-                                                 @RequestParam(required=false) String brand , @RequestParam(required=false) int price)
+                                                 @RequestParam(required=false) String brand , @RequestParam(required=false,defaultValue = "0") int price)
     {
         SearchCriteria searchCriteria = new SearchCriteria(brand,color,size,price);
         List<Product> productList = searchService.getSearchProducts(searchCriteria);
@@ -53,7 +61,7 @@ public class SearchController {
      * @param
      * @return
      */
-    @ApiOperation(value = " Count of Products for Suppliers " , notes = " This API will get count of products for the Supplier ")
+    @ApiOperation(value = " Count of Products for Supplier ID's " , notes = " This API will get count of products for the Supplier ")
     @RequestMapping(value="/suppliers/{supplierId}/products",method = RequestMethod.GET)
     public ResponseEntity<Object> getSupplierProducts(@PathVariable int supplierId)
     {

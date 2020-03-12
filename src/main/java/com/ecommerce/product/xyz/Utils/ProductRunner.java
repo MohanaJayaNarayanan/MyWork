@@ -21,17 +21,17 @@ public class ProductRunner implements CommandLineRunner {
     public void run(String... args) throws Exception {
 
         brandRepository.save(new Brand(1,"Lp"));
-        brandRepository.save(new Brand(1,"PeterEngland"));
-        brandRepository.save(new Brand(1,"Basics"));
-        brandRepository.save(new Brand(1,"Wrangler"));
-        brandRepository.save(new Brand(1,"Max"));
+        brandRepository.save(new Brand(2,"PeterEngland"));
+        brandRepository.save(new Brand(3,"Basics"));
+        brandRepository.save(new Brand(4,"Wrangler"));
+        brandRepository.save(new Brand(5,"Max"));
 
 
         productRepository.save(new Product(6,"name1","sku000x1","White","M",2,5,4,1000));
         productRepository.save(new Product(7,"name2","sku000x2","Blue","L",2,3,4,1500));
         productRepository.save(new Product(8,"name3","sku000x3","Orange","XS",3,2,5,1200));
         productRepository.save(new Product(9,"name4","sku000x4","White","S",4,1,1,500));
-        productRepository.save(new Product(10,"name5","sku000x5","Black","M",5,5,2,2000));
+        productRepository.save(new Product(10,"name5","sku000x5","Black","M",5,5,2,2500));
         productRepository.save(new Product(11,"name6","sku000x6","Yellow","L",5,3,3,200));
         productRepository.save(new Product(12,"name7","sku000x7","white","XL",4,3,5,150));
         productRepository.save(new Product(13,"name8","sku000x8","Red","XXL",3,2,2,2500));
